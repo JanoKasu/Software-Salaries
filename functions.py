@@ -35,4 +35,5 @@ def job_title_frequency(df):
 
 def average_salary_by_location(df):
 	data = df['Location'].value_counts()
-	print(data.head(50))
+	data.plot(kind = 'bar', x = 'Location', y = 'Frequency')
+	plt.show()
